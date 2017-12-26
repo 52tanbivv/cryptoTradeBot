@@ -1,0 +1,33 @@
+@import '../../styles/colors'
+.header
+  display: flex;
+  flex-direction: column;
+  padding-top: 49px;
+  &__months
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+    margin: 0 calc(35 / 1300 * 100%);
+    padding: 0 calc(30 / 1300 * 100%);
+    font-family: 'Open Sans Semibold';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+
+  &__link
+    color: primary-text;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover
+      text-decoration: none;
+
+@media (min-width: 768px)
+  .header
+    &__months
+      display: flex;
+
+@media (min-width: 1025px)
+  .header
+    &__months
+      font-size: 18px;

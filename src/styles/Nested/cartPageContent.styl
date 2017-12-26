@@ -1,0 +1,450 @@
+@import '../../styles/colors'
+.content
+  width: 100%;
+  padding-left: 2.5%;
+  padding-right: 2%;
+  padding-bottom: 5px;
+  background: main-content-background;
+  z-index: 11;
+  &__title
+    height: 73px;
+    margin: 0;
+    font-size: 22px;
+    line-height: 73px;
+    &--order
+      height: 22px;
+      line-height: 22px;
+
+  &__row
+    display: flex;
+    font-weight: normal;
+    background: other-background;
+    &--ticket
+      flex-direction: column;
+      margin-bottom: 17px;
+      padding: 10px calc(16 / 871 * 100%);
+      padding-right: 0;
+      border-radius: 3px;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+    &--date
+      position: relative;
+      margin-left: 3.5%;
+      font-size: 14px;
+      line-height: 26px;
+      &::before
+        position: absolute;
+        left: -24px;
+        top: 4px;
+        content: '';
+        width: 16px;
+        height: 18px;
+        background: url('../../img/calendar.png') no-repeat;
+    &--time
+      position: relative;
+      margin-left: 3.5%;
+      font-size: 14px;
+      line-height: 26px;
+      &::before
+        position: absolute;
+        left: -24px;
+        top: 6px;
+        content: '';
+        width: 16px;
+        height: 18px;
+        background: url('../../img/clock.png') no-repeat;
+    &--venue
+      position: relative;
+      margin-left: 3.5%;
+      font-size: 14px;
+      line-height: 26px;
+      &::before
+        position: absolute;
+        left: -24px;
+        top: 3px;
+        content: '';
+        width: 13px;
+        height: 18px;
+        background: url('../../img/pin.png') no-repeat;
+    &--type
+      margin-top: 10px;
+      font-weight: bold;
+    &--place
+      width: 97.8%;
+    &--row
+      width: 97.8%;
+    &--seat
+      width: 97.8%;
+      padding-bottom: 9px;
+    &--service
+      width: 97.8%;
+    &--discount
+      width: 97.8%;
+    &--insurance
+      width: 97.8%;
+      padding-bottom: 9px;
+    &--total
+      margin-left: 2.6%;
+      padding-left: 2.4%;
+    &--finalData
+      margin-bottom: 10px;
+    &--inTotal
+      width: 100%;
+    &--last
+      flex-direction: column;
+      margin-bottom: 129px;
+      background: inherit;
+
+  &__ticketsBlock
+    margin-bottom: 25px;
+
+  &__column
+    &--finalData
+      width: 100%;
+      height: auto;
+    &--left
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding-bottom: 15px;
+      border-bottom: 2px dashed #ebebeb;
+      &::after
+        content: '';
+        position: absolute;
+        right: -10.5px;
+        top: calc(100% - 10px);
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background: main-content-background;
+    &--right
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding-top: 10px;
+      &::after
+        content: '';
+        position: absolute;
+        left: -24px;
+        bottom: calc(100% - 10px);
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background: main-content-background;
+
+  &__table
+    position: relative;
+    width: 91.2%;
+    box-sizing: border-box;
+    margin-left: 2.6%;
+    padding-left: 2.2%;
+    &::before
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 2px;
+      height: 129px;
+      background: elements-background;
+
+  &__tableColumn
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    &--first
+      width: 61.3%;;
+    &--second
+      width: 24.2%;
+      padding-left: 1.4%;
+    &--third
+      width: 12.5%;
+
+  &__eventName
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 20px;
+
+  &__eventType
+    margin-right: 13px;
+    text-transform: uppercase;
+
+  &__btn
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+    background: inherit;
+    border: 0;
+    &--cross
+      top: 5px;
+      left: -20px;
+    &--burger
+      top: 14px;
+      right: 13px;
+      width: 18px;
+      height: 14px;
+    &--send
+      position: relative;
+      width: 241px;
+      height: 41px;
+      font-size: 18px;
+      line-height: 41px;
+      font-weight: bold;
+      color: secondary-text-color;
+      background: elements-background;
+      border-radius: 3px;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 1);
+
+  &__icon
+    width: 10px;
+    height: 10px;
+    &--burger
+      width: 18px;
+      height: 14px;
+
+  &__text
+    font-weight: normal;
+    &--total
+      display: inline-block;
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: bold;
+      color: elements-background;
+    &--finalData
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: bold;
+    &--inTotal
+      display: inline-block;
+      font-size: 22px;
+      line-height: 25px;
+      font-weight: bold;
+      color: elements-background;
+
+  &__description
+    margin: 25px 0;
+
+  &__form
+    padding-left: calc(60 / 870 * 100%);
+    padding-right: calc(60 / 870 * 100%);
+
+  &__personalDetails
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+  &__insurance
+    margin-bottom: 25px;
+
+  &__delivery
+    margin-bottom: 10px;
+
+  &__inputBlock
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 43px;
+    margin-bottom: 10px;
+    &--address
+      width: 100%;
+      margin-bottom: 0;
+    &--messenger
+      width: 100%;
+      margin-bottom: 0;
+
+  &__input
+    min-height: 43px;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'Roboto';
+    border-radius: 3px;
+    border: 0;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.30);
+    &--address
+      background: #e8e8e8;
+
+  &__label
+    position: relative;
+    font-weight: bold;
+    &--checkbox
+      display: block;
+      padding-left: 25px;
+      font-weight: normal;
+      &::before
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 16px;
+        height: 16px;
+        background: url('../../img/checkbox.png');
+    &--helper
+      position: absolute;
+      bottom: 12px;
+      left: 15px;
+      font-weight: normal;
+      color: primary-text-lighter;
+    &--messenger
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      font-weight: normal;
+      color: primary-text-lighter;
+    &--finalData
+      width: 71.6%;
+      font-size: 18px;
+      line-height: 20px;
+      color: primary-text;
+      font-weight: normal;
+    &--total
+      display: inline-block;
+      width: 57.2%;
+      font-size: 18px;
+      line-height: 25px;
+      text-transform: uppercase;
+      font-weight: bold;
+    &--inTotal
+      display: inline-block;
+      width: 35.65%;
+      font-size: 22px;
+      line-height: 25px;
+      font-weight: bold;
+
+  &__dropdown
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 1px;
+    list-style: none;
+    background: other-background;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.30);
+
+  &__dropdownItem
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-left: 15px;
+
+  &__link
+    text-decoration: none;
+    color: primary-text-lighter;
+
+  &__finalData
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-height: 141px;
+    margin-bottom: 18px;
+    padding: 14px 16px;
+    background: other-background;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.30);
+
+  &__userAgreement
+    width: 100%;
+    margin-bottom: 10px;
+
+  &__userData
+    width: 100%;
+    margin-bottom: 10px;
+
+.content__checkbox--delivery:checked + .content__label
+  color: other-backround;
+
+.content__checkbox:checked + .content__label--checkbox::before
+  background: url('../../img/checkboxChecked.png');
+
+@media (min-width: 1078px)
+  .content
+    width: 77%;
+    box-shadow: 2px 0 2px #d8d8d8;
+    &__inputBlock
+      width: 31.4%;
+      &--address
+        width: 100%;
+      &--messenger
+        width: 100%;
+
+@media (min-width: 850px)
+  .content
+    &__row
+      &--ticket
+        flex-direction: row;
+      &--type
+        position: absolute;
+        bottom: 20px;
+        margin-top: 0;
+      &--date
+        margin-left: 6.5%;
+      &--time
+        margin-left: 6.5%;
+      &--venue
+        margin-left: 6.5%;
+      &--total
+        margin-left: 6.7%;
+
+    &__column
+      &--finalData
+        width: 50%;
+        height: auto;
+      &--left
+        position: relative;
+        width: 45%;
+        padding-bottom: 0;
+        border-bottom: 0;
+        &::after
+          right: -10.5px;
+          top: -20px;
+      &--right
+        position: relative;
+        width: 55%;
+        padding-top: 0;
+        border-left: 2px dashed #ebebeb;
+        &::after
+          left: -11px;
+          bottom: -20px;
+    &__personalDetails
+      flex-direction: row;
+
+    &__inputBlock
+      width: 31.4%;
+      &--address
+        width: 100%;
+      &--messenger
+        width: 100%;
+
+    &__table
+      margin-left: 6.6%;
+
+    &__label
+      &--total
+        width: 59.2%;
+@media (min-width: 768px)
+  .content
+    &__row
+      &--last
+        flex-direction: row;
+    &__finalData
+      flex-direction: row;
+      flex-wrap: wrap;
+
+    &__column
+      &--finalData
+        width: 50%;
+
+    &__inputBlock
+      margin-bottom: 0;
+
+    &__userAgreement
+      width: 35.64%;
+      margin-bottom: 0;
+
+    &__userData
+      width: 32.7%;
+      margin-bottom: 0;

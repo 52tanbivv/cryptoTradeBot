@@ -1,0 +1,304 @@
+@import '../../styles/colors'
+
+.content
+  width: 100%;
+  &__search
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 82px;
+    padding-left: calc(60 / 920 * 100%);
+    padding-right: calc(30 / 920 * 100%);
+    background: elements-background;
+
+  &__typeLabel
+    font-size: 16px;
+    line-height: 16px;
+    color: other-background;
+
+  &__chooseType
+    position: relative;
+    width: 22%;
+
+  &__currentType
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 41px;
+    padding: 13px 16px;
+    font-weight: bold;
+    background: other-background;
+    border: 0;
+    border-radius: 4px;
+
+  &__type
+    height: 20px;
+    cursor: pointer;
+    &--dropdown
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 14px;
+
+  &__burger
+    margin-top: 1px;
+    cursor: pointer;
+
+  &__types
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 41px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px 15px;
+    list-style: none;
+    background: other-background;
+    &--search
+      z-index: 10;
+      box-shadow: 0 2px 2px 0 rgba(124, 124, 124, 0.5);
+
+  &__inputBlock
+    position: relative;
+    width: 56.5%;
+    height: 41px;
+
+  &__input
+    width: 100%;
+    height: 41px;
+    padding: 10px 15px;
+    font-family: 'Roboto'
+    font-size: 16px;
+    color: primary-text;
+    border: 0;
+    border-radius: 4px;
+    outline: 0;
+
+  &__label
+    &--text
+      position: absolute;
+      top: 12px
+      left: 15px;
+      font-family: 'Roboto';
+      font-size: 14px;
+      color: rgba(164, 164, 164, 0.7)
+    &--searchIcon
+      position: absolute;
+      top: 10px
+      right: 15px;
+
+  &__row
+    display: flex;
+    &--organizations
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 39px 3.5%;
+    &--name
+      position: absolute;
+      bottom: 11px;
+      left: 11px;
+      width: 80%;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: bold;
+      color: secondary-text-color;
+      text-decoration: none;
+      &:hover
+        text-decoration: none;
+    &--type
+      position: absolute;
+      top: 11px;
+      left: 11px;
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: bold;
+      color: secondary-text-color;
+    &--address
+      position: relative;
+      align-items: center;
+      height: 40px;
+      padding-left: 30px;
+      padding-right: 5px;
+      background: #f5f5f5;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      &::before
+        position: absolute;
+        top: 10px;
+        left: 11px;
+        content: '';
+        width: 12px;
+        height: 20px;
+        background: url('../../img/pin.png');
+        background-position: center;
+        background-repeat: no-repeat;
+    &--soon
+      align-items: center;
+      margin-bottom: 5px;
+
+    &--hall
+      margin-bottom: 5px;
+
+
+  &__organizationBlock
+    width: 100%;
+    margin-bottom: 29px;
+    background: other-background;
+    box-shadow: 0 2px 2px 1px rgba(205, 205, 205, 0.8)
+    border-radius: 5px;
+
+  &__organizationTop
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+  &__img
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+  &__organizationBottom
+    width: 100%;
+    height: auto;
+    padding: 11px;
+    border-bottom: 1px solid #e1e1e1;
+
+  &__label
+    font-weight: bold;
+
+  &__hall
+    margin-right: 5px;
+
+  &__label
+    margin-right: 5px;
+
+  &__address
+    font-size: 14px;
+    line-height: 16px;
+
+  &__event
+    display: block;
+    padding: 5px 8px;
+    font-weight: bold;
+    color: secondary-text-color;
+    background: #78c479;
+    border-radius: 5px;
+
+  &__icon
+    position: absolute;
+    right: 20px;
+    bottom: -17px;
+    width: 40px;
+    height: 40px;
+    background: elements-background;
+    border-radius: 100%;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.7);
+    &::after
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    &--arena
+      &::after
+        width: 30px;
+        height: 24px;
+        background: url('../../img/arenaIcon.png') no-repeat center;
+    &--houseOfCulture
+      &::after
+        width: 24px;
+        height: 30px;
+        background: url('../../img/houseOfCultureIcon.png') no-repeat;
+    &--cinema
+      &::after
+        width: 32px;
+        height: 30px;
+        background: url('../../img/cinemaIcon.png') no-repeat center;
+    &--circus
+      &::after
+        width: 26px;
+        height: 30px;
+        background: url('../../img/circusIcon.png') no-repeat center;
+    &--club
+      &::after
+        width: 29px;
+        height: 31px;
+        background: url('../../img/clubIcon.png') no-repeat center;
+    &--concertHall
+      &::after
+        width: 20px;
+        height: 30px;
+        background: url('../../img/concertHallIcon.png') no-repeat center;
+    &--museum
+      &::after
+        width: 31px;
+        height: 28px;
+        background: url('../../img/museumIcon.png') no-repeat center;
+    &--openAir
+      &::after
+        width: 30px;
+        height: 30px;
+        background: url('../../img/openAirIcon.png') no-repeat center;
+
+.noEvents
+  background: #dc4d4d;
+
+@media (min-width: 1078px)
+  .content
+    width: 76%;
+
+@media (min-width: 768px)
+  .content
+    &__search
+      display: flex;
+      padding-left: calc(20 / 920 * 100%);
+
+    &__typeLabel
+      font-size: 14px;
+
+    &__chooseType
+      width: 26%;
+
+    &__inputBlock
+      width: 54.5%;
+
+    &__currentType
+      padding: 13px 11px;
+
+    &__row
+      &--organizations
+        flex-direction: row;
+      &--address
+        padding-right: 0;
+
+    &__organizationBlock
+      width: 48.2%;
+    &__icon
+      right: 25px;
+      bottom: -30px;
+      width: 60px;
+      height: 60px;
+
+@media (min-width: 1024px)
+  .content
+    &__search
+      padding-left: calc(60 / 920 * 100%);
+
+    &__typeLabel
+      font-size: 16px;
+
+    &__chooseType
+      width: 23%;
+
+    &__currentType
+      padding: 13px 16px;
+
+    &__inputBlock
+      width: 56.5%;

@@ -1,0 +1,297 @@
+@import '../../styles/colors'
+.ticketOfficesContent
+  position: relative;
+  width: 100%;
+  background: main-background;
+  z-index: 11;
+  &__subFilters
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 89%;
+    min-height: 55px
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0;
+    padding-left: 3.2%;
+    text-align: center;
+    list-style: none;
+    font-size: 18px;
+    line-height: 18px;
+    background: other-background;
+
+  &__subfilter
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 31px
+    margin-top: 0;
+    &:nth-child(1)
+      width: 107px;
+    &:nth-child(2)
+      width: 172px
+
+  &__breadcrumbs
+    display: flex;
+    width: 100%;
+    background: other-background;
+    border-bottom: 1px solid #eaeaea;
+
+  &__view
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 84px;
+    height: 48px;
+    margin-top: 3px;
+    margin-right: calc(25 / 920 * 100%);
+
+  &__btn
+    display: block;
+    font-family: 'Roboto';
+    &--grid
+      width: 40px;
+      height: 44px;
+      background-image: url('../../img/grid.png');
+    &--list
+      width: 40px;
+      height: 44px;
+      background-image: url('../../img/list.png');
+
+  &__officeBlock
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    min-height: 131px;
+    max-height: 131px;
+    cursor: pointer;
+    background: other-background;
+    z-index: 10;
+    &--current
+      width: calc(100% + 20px);
+      max-height: 500px;
+      margin-left: -10px;
+      box-shadow: 0 0 6px #d8d8d8;
+      z-index: 100;
+      opacity: 0.999
+
+  &__top
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 131px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 3.3%;
+    padding-right: 3.3%;
+
+  &__bottom
+    visibility: hidden;
+    box-sizing: border-box;
+    min-height: 116px;
+    padding-top: 10px;
+    padding-bottom: 3.3%;
+    padding-left: 3.3%;
+    padding-right: 3.3%;
+
+  &__imgWrap
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 100%;
+    background: #d7d7d7;
+
+  &__cardsBlock
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 3.3%;
+    &--current
+      display: block;
+
+  &__img
+    display: none;
+    width: 50px;
+    height: 50px;
+    &--visa
+      width: 52px;
+      height: 17px;
+      margin-right: 10px;
+      border-radius: 0;
+    &--masterCard
+      width: 35px;
+      height: 20px;
+      margin-right: 0;
+      border-radius: 0;
+    &--officeOnMap
+      width: 100%;
+      height: 205px;
+      margin-right: 0;
+      border-radius: 0;
+
+  &__location
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 6px;
+    &--onMap
+      width: 100%;
+      font-weight: bold;
+
+  &__openHours
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-end;
+    &--onMap
+      width: 100%;
+
+  &__row
+    display: flex;
+    justify-content: space-between;
+    &--title
+      font-weight: bold;
+    &--address
+      margin-bottom: 7px;
+      font-size: 14px;
+      line-height: 14px;
+    &--distance
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: normal;
+    &--opened
+      margin-bottom: 7px;
+      font-size: 14px;
+      line-height: 14px;
+    &--closed
+      margin-bottom: 13px;
+      font-size: 14px;
+      line-height: 14px;
+
+  &__status
+      align-self: center;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #d7d7d7;
+      &--online
+        color: elements-background;
+
+  &__details
+    margin: 0;
+    margin-bottom: 17px;
+    font-size: 14px;
+    line-height: 20px;
+
+  &__btnBlock
+    display: flex;
+    justify-content: space-between;
+    padding-right: 26px;
+
+  &__link
+    font-size: 16px;
+    line-height: 16px;
+    font-family: 'Roboto'
+    text-decoration: none;
+    color: primary-text;
+    &:hover
+      text-decoration: none;
+    &--subFilter
+      text-transform: uppercase;
+    &--current
+      position: relative;
+      margin-top: 4px;
+      font-weight: bold;
+      line-height: 32px;
+      border-bottom: 5px solid elements-background;
+    &--map
+      margin-bottom: 10px;
+      font-size: 14px;
+      border-bottom: 1px dotted #7c7c7c;
+
+  &__mapView
+    position: relative;
+    width: 96.4%;
+    margin-left: 3.6%;
+    background: #fff;
+    box-shadow: 2px 0 2px #d8d8d8;
+
+  &__officeOnMap
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 482px;
+    height: 457px;
+    padding-bottom: 12px;
+    background: other-background;
+    border-bottom: 5px solid elements-background;
+    transform: translate(-75%, -50%);
+    box-shadow: 0 0 8px 0 #5d5c5b;
+    &::after
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -25px;
+      width: 482px;
+      height: 25px;
+      background: url(../../img/cashboxCorner.png);
+
+  &__officeOnMapBottom
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 10px;
+
+.ticketOfficesContent__officeBlock--current > .ticketOfficesContent__bottom
+  display: flex;
+  visibility: visible;
+  flex-direction: column;
+  border-top: 1px solid #eaeaea;
+
+.ticketOfficesContent__btn--grid.ticketOfficesContent__btn--pressed
+  background-image: url('../../img/grid_pressed.png')
+  background-position: center;
+  background-repeat: no-repeat;
+
+.ticketOfficesContent__btn--list.ticketOfficesContent__btn--pressed
+  background-image: url('../../img/list_pressed.png')
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+@media (min-width: 768px)
+  .ticketOfficesContent
+    &__top
+      flex-direction: row;
+      padding-right: 0;
+    &__location
+      width: 50%;
+      margin-bottom: 0;
+    &__openHours
+      width: 40%;
+    &__imgWrap
+      display: flex;
+
+@media (min-width: 769px)
+  .ticketOfficesContent
+    &__img
+      display: inline;
+    &__location
+      width: 45%;
+    &__openHours
+      width: 35%;
+    &__view
+      display: flex;
+
+@media (min-width: 1078px)
+  .ticketOfficesContent
+    width: 76.2%;
+    &__breadcrumbs
+      box-shadow: 2px 0 2px #d8d8d8;
+    &__officeBlock
+      box-shadow: 2px 0 2px #d8d8d8;

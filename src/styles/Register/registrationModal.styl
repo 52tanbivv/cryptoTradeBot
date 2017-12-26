@@ -1,0 +1,61 @@
+@import '../../styles/colors'
+.overlay
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 10000;
+
+.registration
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 25.9%;
+  max-height: 551px;
+  background: other-background;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(38,38,43,0.5);
+  &__close
+    position: absolute;
+    top: -30px;
+    right: 0;
+    min-width: 24px;
+    min-height: 24px;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+  &__tabs
+    display: flex;
+    justify-content: center;
+    height: 53px;
+    border-radius: 5px;
+  &__tab
+    width: 50%;
+    height: 53px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: bold;
+    color: secondary-text-color;
+    background: elements-background;
+    border: none;
+    cursor: pointer;
+    &--current
+      color: primary-text;
+      background: other-background;
+    &--signIn
+      border-top-left-radius: 5px;
+    &--signUp
+      border-top-right-radius: 5px;
+
+.router-link-active
+  background: other-background;
+
+.router-link-active > .registration__btn
+  color: primary-text;

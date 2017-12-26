@@ -1,0 +1,249 @@
+@import '../styles/colors'
+.navbar
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 42px;
+  margin: 0 auto;
+  color: primary-text;
+  background: other-background;
+  box-shadow: 0 1px 3px 0 rgba(124, 124, 124, 0.5);
+  opacity: 0.99;
+  z-index: 101;
+  &__wrapper
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+
+  &__leftBlock
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+
+  &__search
+    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+
+  &__logo
+    width: calc(236/320*100%);
+    min-width: 111px;
+    padding-left: 0;
+    padding-right: calc(10 / 1300 * 100%);
+    padding-top: 8px;
+    text-align: left;
+    font-size: 0;
+
+  &__img
+    &--search
+      width: 22px;
+      height: 23px;
+    &--logo
+      width: 28px;
+      height: 30px;
+      margin-right: 12px;
+    &--text
+      width: 59px;
+      height: 28px;
+    &--userPic
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+
+  &__location
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 155px;
+    margin-right: 0;
+    padding: 0 20px
+    background: main-content-background
+    border-right: 1px solid rgba(124, 124, 124, 0.2);
+    border-left: 1px solid rgba(124, 124, 124, 0.2);
+
+  &__currentCity
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 11px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+
+  &__cities
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 35px;
+    right: 0;
+    width: 155px;
+    max-height: 460px;
+    padding: 10px 20px;
+    list-style: none;
+    text-align: center;
+    background: main-content-background;
+    z-index: 1000;
+    overflow: scroll;
+    box-shadow: 0 3px 3px 1px rgba(124, 124, 124, 0.5);
+
+  &__city
+    width: 134px;
+    height: 28px;
+    margin-bottom: 5px;
+    margin-top: 0 !important;
+    padding-right: 5px;
+    line-height: 14px;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: left;
+    background: main-content-background;
+
+  &__burger
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+
+  &__phone
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: calc(206/1300*100%);
+    max-width: calc(396/1300*100%);
+
+  &__phoneNum
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: bold;
+    &--big
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: bold;
+
+  &__userBlock
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc(434/1300*100%);
+    padding-right: calc(20/1300*100%);
+
+  &__link
+    text-decoration: none;
+    font-weight: bold;
+    color: primary-text !important;
+    cursor: pointer;
+    &:visited
+      color: primary-text !important;
+      text-decoration: none;
+    &:hover
+      color: primary-text !important;
+      text-decoration: none !important;
+    &:active
+      color: primary-text !important;
+    &--cart
+      margin-right: 16px;
+
+  &__langBtn
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    width: 107px;
+    height: 49px;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+
+  &__chooseLang
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 100%;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+
+  &__currentLang
+    display: none;
+
+  &__langs
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    color: #7c7c7c;
+    background: #ebebeb;
+    box-shadow: 0 1px 1px 0 rgba(124,124,124,0.5);
+
+  &__lang
+    cursor: pointer;
+
+@media (min-width: 1200px)
+  .navbar
+    &__logo
+      padding-left: calc(65/750*100%);
+      text-align: center;
+
+@media (min-width: 768px)
+  .navbar
+    &__location
+      margin-right: 5px;
+    &__currentCity
+      padding-top: 15px;
+    &__cities
+      width: 100%;
+      left: 0;
+      flex-wrap: wrap;
+
+@media (min-width: 769px)
+ .navbar
+   height: 49px;
+   &__leftBlock
+     width: 50%;
+   &__search
+     display: none;
+   &__logo
+     width: calc(198/750*100%);
+     text-align: right;
+   &__location
+     display: flex;
+   &__userBlock
+     display: flex;
+   &__phone
+     display: flex;
+   &__langBtn
+     margin-right: calc(65/1300*100%);
+     background: main-content-background
+   &__currentLang
+     display: inline;
+   &__burger
+     margin-left: 15px;
+     &--lang
+       width: 18px;
+
+
+@media (min-width: 900px)
+  .navbar
+    &__cities
+      position: absolute;
+      width: 867px;
+      overflow: hidden;
+    &__phoneNum
+      font-size: 14px;
+      &--big
+        font-size: 18px;

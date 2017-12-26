@@ -1,0 +1,160 @@
+@import '../../styles/colors'
+.signUp
+  padding: 16px;
+  padding-bottom: 18px;
+  &__title
+    margin-top: 7px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+
+  &__text
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+
+  &__socials
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    margin-bottom: 32px;
+    margin-top: 25px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 30px;
+    list-style: none;
+    border-bottom: 1px solid #eaeaea;
+
+  &__social
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    border-radius: 100%;
+    cursor: pointer;
+    &--vk
+      background: #5c7196;
+    &--fb
+      background: #475995;
+    &--ok
+      background: #d67120;
+
+  &__icon
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &--vk
+      width: 27px;
+      height: 15px;
+    &--fb
+      width: 12px;
+      height: 22px;
+    &--ok
+      width: 16px;
+      height: 26px;
+    &--phone
+      top: 48%;
+      left: 17px;
+      color: rgba(211,211,211,0.5);
+    &--email
+      top: 48%;
+      left: 17px;
+      color: rgba(211,211,211,0.5);
+    &--name
+      top: 48%;
+      left: 17px;
+      color: rgba(211,211,211,0.5);
+    &--warn
+      left: -12px;
+      color: #c04e4e;
+
+  &__inputBlock
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 32px);
+    height: 43px;
+    margin-bottom: 14px;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0 #d4d4d4;
+    &--error
+      box-shadow: 0 1px 2px 0 #c04e4e;
+
+  &__label
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: 'Roboto';
+    color: rgba(211,211,211,1);
+    transform: translateY(-50%);
+
+  &__input
+    width: 100%;
+    height: 43px;
+    padding-left: 50px;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: 'Roboto';
+    color: rgba(211,211,211,1);
+    border-radius: 8px;
+    border: 1px solid #e7e7e7;
+    outline: 0;
+    &--error
+      border: 1px solid #c04e4e;
+
+  &__btn
+    width: 100%;
+    height: 40px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    background: elements-background;
+    border: 0;
+    border-radius: 7px;
+    color: secondary-text-color;
+    box-shadow: 0 2px 1px 0 rgba(38,38,43,0.8);
+    cursor: pointer;
+
+  &__warnBlock
+    position: absolute;
+    right: -73%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    transform: translateY(-50%);
+
+  &__warn
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    margin-left: 18px;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 12px 17px;
+    background: #c04e4e;
+    color: secondary-text-color;
+    border-radius: 5px;
+    &::before
+      content: '';
+      position: absolute; /* Абсолютное позиционирование */
+      left: -19px; top: 10px; /* Положение треугольника */
+      border: 10px solid transparent; /* Прозрачные границы */
+      border-right: 10px solid #c04e4e; /* Добавляем треугольник */
+
+.signUp__input:focus ~ .signUp__label
+  display: none;
+
+.md-input-container::after
+  display: none;

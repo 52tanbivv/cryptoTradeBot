@@ -1,0 +1,71 @@
+@import '../../styles/colors'
+.dates
+  &__wrapper
+    display: none;
+    position: relative;
+    height: 68px;
+    padding-left:calc(30/1300*100%);
+    padding-right:calc(30/1300*100%);
+    margin: 0 calc(35/1300*100%);
+    background: other-background
+
+  &__item
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 51px;
+    cursor: pointer;
+    &--today
+      height: 51px;
+      color: #dc4d4d;
+      border: 1px solid #dc4d4d;
+      border-radius: 25px;
+    &--currentMonth
+      margin-right: 10px;
+
+  &__btn
+    position: absolute;
+    background: none;
+    top: 22px;
+    border: none;
+    cursor: pointer;
+    &--right
+      right: 26px;
+    &--left
+      left: 26px;
+      transform: rotate(180deg);
+
+  &__day
+    font-size: 11px;
+    line-height: 14px;
+
+  &__date
+    font-size: 16px;
+    line-height: 18px;
+
+.owl-stage-outer
+  height: 68px;
+  padding-top: 15px;
+  box-sizing: border-box;
+  background: other-background
+
+.owl-carousel
+  width: auto;
+  overflow: hidden;
+  margin: 0 calc(20/1300*100%);
+  box-sizing: border-box;
+  background: other-background
+
+.owl-nav
+  position: absolute;
+
+.owl-carousel.owl-carousel
+  display: flex;
+  align-items: center;
+
+@media (min-width: 768px)
+  .dates
+    &__wrapper
+      display: flex;

@@ -1,0 +1,65 @@
+@import '../../styles/colors'
+.aside
+  display: none;
+  padding-top: 10px;
+
+@media (min-width: 1078px)
+  .aside
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 24%;
+    padding: 0;
+    padding-right: calc(10 / 1230 *100%);
+    padding-left: calc(30 / 1230 * 100%);
+    padding-top: 10px;
+    font-family: 'Open Sans';
+    background: other-background;
+    &__svg
+      width: 15px;
+      height: 15px;
+      margin-right: 14px;
+      &--news
+        width: 15px;
+        height: 15px;
+      &--tickets
+        width: 20px;
+        height: 19px;
+        margin-right: 9px;
+      &--boxOffices
+        width: 18px;
+        height: 15px;
+        margin-right: 11px;
+      &--venues
+        width: 17px;
+        height: 16px;
+        margin-right: 12px;
+
+    &__link
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      line-height: 32px;
+      text-decoration: none;
+      color: primary-text;
+      cursor: pointer;
+      &:hover
+        text-decoration: none;
+
+    &__list
+      display: flex;
+      align-items: center;
+      margin-bottom: 26px;
+      margin-top: 21px;
+      padding-left: 0;
+      list-style: none;
+
+    &__listItem
+      margin-right: 10px;
+      margin-top: 0;
+
+    &__banners
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      padding-right: calc(20 / 1230 *100%);
