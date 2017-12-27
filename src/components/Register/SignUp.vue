@@ -51,8 +51,10 @@
       </transition>
     </div>
 
-    <button class="signUp__btn" type="submit" name="button"
-            @click="signUpAndForwardToDashboard($event)">Зарегистрироваться</button>
+    <div class="signUp__btnBlock">
+      <md-button class="signUp__btn md-button md-raised md-accent" type="submit" name="button"
+      @click.prop="signUpAndForwardToDashboard($event)">Зарегистрироваться</md-button>
+    </div>
   </form>
 </template>
 
@@ -96,7 +98,8 @@ export default {
     },
     signUpAndForwardToDashboard (e) {
       e.preventDefault()
-      this.$router.push({name: 'dashboard'})
+      this.$router.push({name: 'account'})
+      this.$store.dispatch('hideRegistrationModal')
     }
   },
   computed: mapState({

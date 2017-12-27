@@ -51,8 +51,8 @@ export default {
       if ($(e.target).hasClass('registration__tab--signUp')) {
         $(e.target).css('box-shadow', 'none')
         $(e.target).addClass('registration__tab--current')
-        $(e.target).siblings().css('box-shadow', 'inset -1px -1px 1px 1px rgba(38,38,43,0.4)')
         $(e.target).siblings().removeClass('registration__tab--current')
+        $(e.target).siblings().css('box-shadow', 'none')
       }
       this.$store.dispatch('showSignUpForm')
     },
@@ -61,8 +61,8 @@ export default {
       if ($(e.target).hasClass('registration__tab--signIn')) {
         $(e.target).css('box-shadow', 'none')
         $(e.target).addClass('registration__tab--current')
-        $(e.target).siblings().css('box-shadow', 'inset 1px -1px 1px 1px rgba(38,38,43,0.4)')
         $(e.target).siblings().removeClass('registration__tab--current')
+        $(e.target).siblings().css('box-shadow', 'none')
       }
       this.$store.dispatch('showSignInForm')
     }

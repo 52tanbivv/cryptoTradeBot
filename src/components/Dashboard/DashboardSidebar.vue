@@ -3,18 +3,18 @@
     <md-toolbar class="md-transparent md-primary" md-elevation="0">
     </md-toolbar>
     <ul class="dashboardSidebar__list md-list md-theme-demo-light">
-      <md-list-item class="dashboardSidebar__item dashboardSidebar__item--current"
-                    @click="makeActive($event)">
+      <md-list-item class="dashboardSidebar__item dashboardSidebar__item--account"
+                    @click="goToAccountView($event)">
         <img class="dashboardSidebar__icon" src="../../img/account_circle.svg" alt="">
         <span class="dashboardSidebar__text md-list-item-text">Account</span>
       </md-list-item>
       <md-list-item class="dashboardSidebar__item"
-                    @click="makeActive($event)">
+                    @click="goToStatisticsView($event)">
         <img class="dashboardSidebar__icon" src="../../img/stat.svg" alt="">
         <span class="dashboardSidebar__text md-list-item-text">Statistics</span>
       </md-list-item>
       <md-list-item class="dashboardSidebar__item"
-                    @click="makeActive($event)">
+                    @click="goToTraidingView($event)">
         <img class="dashboardSidebar__icon" src="../../img/trade.svg" alt="">
         <span class="dashboardSidebar__text md-list-item-text">Trading</span>
       </md-list-item>
@@ -38,15 +38,50 @@ export default {
     }
   },
   methods: {
-    makeActive (e) {
+    goToAccountView (e) {
       let item = $(e.target).parent().parent().parent()
       console.log(item)
-      $('.dashboardSidebar__item').removeClass('dashboardSidebar__item--current')
-      item.addClass('dashboardSidebar__item--current')
-      this.$router.push({name: 'traiding'})
+      let hasClass = item.hasClass('dashboardSidebar__item--current')
+      let hasOtherClass = item.hasClass('dashboardSidebar__list')
+      console.log('hasClass ', hasClass)
+      console.log('hasOtherClass ', hasOtherClass)
+      if (!hasClass && !hasOtherClass) {
+        $('.dashboardSidebar__item').removeClass('dashboardSidebar__item--current')
+        item.addClass('dashboardSidebar__item--current')
+        this.$router.push({name: 'account'})
+      }
+    },
+    goToStatisticsView (e) {
+      let item = $(e.target).parent().parent().parent()
+      console.log(item)
+      let hasClass = item.hasClass('dashboardSidebar__item--current')
+      let hasOtherClass = item.hasClass('dashboardSidebar__list')
+      console.log('hasClass ', hasClass)
+      console.log('hasOtherClass ', hasOtherClass)
+      if (!hasClass && !hasOtherClass) {
+        $('.dashboardSidebar__item').removeClass('dashboardSidebar__item--current')
+        item.addClass('dashboardSidebar__item--current')
+        this.$router.push({name: 'statistics'})
+      }
+    },
+    goToTraidingView (e) {
+      let item = $(e.target).parent().parent().parent()
+      console.log(item)
+      let hasClass = item.hasClass('dashboardSidebar__item--current')
+      let hasOtherClass = item.hasClass('dashboardSidebar__list')
+      console.log('hasClass ', hasClass)
+      console.log('hasOtherClass ', hasOtherClass)
+      if (!hasClass && !hasOtherClass) {
+        $('.dashboardSidebar__item').removeClass('dashboardSidebar__item--current')
+        item.addClass('dashboardSidebar__item--current')
+        this.$router.push({name: 'traiding'})
+      }
     }
   },
   beforeCreate () {
+  },
+  mounted () {
+    $('.dashboardSidebar__item--account').addClass('dashboardSidebar__item--current')
   },
   computed: mapState({
     preloader: state => state.onload.preloader

@@ -1,6 +1,6 @@
 <template>
   <div class="statistics">
-    <md-switch v-model="boolean" class="md-primary">Подключиться к бирже</md-switch>
+
   </div>
 </template>
 
@@ -26,5 +26,4 @@ export default {
 
 <style media="screen" lang="stylus">
 @import '../../styles/Dashboard/statistics'
-
 </style>
