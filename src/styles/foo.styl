@@ -5,103 +5,27 @@ a:hover
   display: flex;
   align-items: center;
   min-height: 59px;
-  margin: 0 calc(35 / 1300 * 100%);
   padding-left: 35px;
   padding-right: 35px;
   padding-top: 5px;
   padding-bottom: 5px;
-  background: elements-background;
   z-index: 10000;
   opacity: 0.999;
-
-  &__logo
-    display: none;
-    width: calc(100 / 1230 * 100%)
-    margin-right: calc(68 / 1230 *100%);
-
-  &__img
-    width: 90%;
 
   &__contacts
     width: 100%;
     display: flex;
     justify-content: center;
 
-  &__list
-    display: none;
-    margin: 0;
-    margin-bottom: 20px;
-    padding: 0;
-    padding-right: 20px;
-    list-style: none;
-
-  &__listItem
-    margin-right: 10px;
-    margin-top: 0;
-
-  &__row
-    display: block;
-    font-size: 12px;
-    line-height: 19px;
-    color: secondary-text-color;
-    &--copyright
-      display: block;
-      text-align: center;
-    &--phone
-      display: none;
-    &--tickets
-      display: none;
-    &--email
-      display: none;
-    &--address
-      display: none;
-
-  &__linksBlock
-    display: none;
-    flex-direction: column;
-    width: 28%;
-    padding-left: 2.5%;
-    &--first
-      width: 29%;
-      padding-left: 6%;
-
-  &__link
-    font-size: 14px;
-    line-height: 24px;
-    text-decoration: none;
-    color: secondary-text-color;
-    font-family: 'Open Sans'
-    &:hover
-      text-decoration: none;
-    &--first
-      margin-bottom: 22px;
-      font-weight: bold;
 
 @media (min-width: 768px)
   .footer
-    align-items: flex-start;
-    min-height: 211px;
+    align-items: flex-end;
     padding-top: 30px;
     padding-bottom: 25px;
-    &__logo
-      display: block;
-    &__linksBlock
-      display: flex;
     &__contacts
       flex-direction: column;
       width: 36%;
     &__list
       display: flex;
       padding-right: 0;
-    &__row
-      &--copyright
-        display: block;
-        text-align: left;
-      &--phone
-        display: block;
-      &--tickets
-        display: block;
-      &--email
-        display: block;
-      &--address
-        display: block;

@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="app">
+  <div id="app" class="app md-app">
     <router-view></router-view>
   </div>
 </template>
@@ -10,12 +10,6 @@ import store from './vuex'
 export default {
   name: 'app',
   mounted () {
-    if (window.performance.navigation.type === 1) {
-      console.log('page reloaded')
-      this.$router.push('/')
-    } else {
-      console.info('This page is not reloaded')
-    }
   },
   store
 }
@@ -23,8 +17,9 @@ export default {
 
 <style lang="stylus">
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons")
-@import '../node_modules/vue-material/dist/vue-material.css'
 @import '/styles/colors'
+@import '/styles/normalize'
+@import '../node_modules/vue-material/dist/vue-material.min.css'
 
 @font-face {
   font-weight: normal;
@@ -43,7 +38,6 @@ export default {
   max-width: 1300px
   min-height: 100%
   margin: 0 auto
-  background: #fbfbfb
 body
   min-height: 100%
   overflow-y: scroll
@@ -52,7 +46,6 @@ body
   -moz-osx-font-smoothing: grayscale
   color: #fff
   font-size: 16px
-  background: #f2f2f2 url('./img/bodyBackgroundMoscow.jpg')
   background-repeat: no-repeat
   background-size: cover
 

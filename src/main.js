@@ -6,6 +6,8 @@ import VueLocalStorage from 'vue-localstorage'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueScroll from 'vue-scroll'
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
 // import VueResource from 'vue-resource'
 import { router } from './router'
 

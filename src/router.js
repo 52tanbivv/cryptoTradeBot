@@ -2,20 +2,16 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Root from './components/Root/Root'
-import MainHeaderWrapper from './components/Root/MainHeaderWrapper'
 
 import SignIn from './components/Register/SignIn'
 import SignUp from './components/Register/SignUp'
 
-import Nested from './components/Nested/Nested'
+import Dashboard from './components/Dashboard/Dashboard'
+import Account from './components/Dashboard/Account'
+import Statistics from './components/Dashboard/Statistics'
+import Traiding from './components/Dashboard/Traiding'
+
 /* import ErrorPage from './components/ErrorPage' */
-import EventPage from './components/Nested/EventPage'
-import AboutPage from './components/Nested/AboutPage'
-import NewsPage from './components/Nested/NewsPage'
-import TicketOffices from './components/Nested/TicketOffices'
-import Organizations from './components/Nested/Organizations'
-import OrganizationPage from './components/Nested/OrganizationPage'
-import CartPage from './components/Nested/CartPage'
 
 Vue.use(VueRouter)
 
@@ -28,10 +24,6 @@ export const router = new VueRouter({
       component: Root,
       children: [
         {
-          path: 'mainHeaderWrapper',
-          component: MainHeaderWrapper
-        },
-        {
           path: 'signIn',
           component: SignIn
         },
@@ -43,43 +35,22 @@ export const router = new VueRouter({
     },
     {
       path: '/',
-      component: Nested,
+      component: Dashboard,
       children: [
         {
-          name: 'eventPage',
-          path: ':db/event/:id',
-          component: EventPage
+          path: 'account',
+          name: 'account',
+          component: Account
         },
         {
-          name: 'aboutPage',
-          path: 'aboutPage',
-          component: AboutPage
+          path: 'statistics',
+          name: 'statistics',
+          component: Statistics
         },
         {
-          name: 'newsPage',
-          path: ':db/newsPage',
-          component: NewsPage
-        },
-        {
-          name: 'ticketOffices',
-          path: ':db/ticketOffices',
-          component: TicketOffices
-        },
-        {
-          name: 'organizations',
-          path: ':db/organizations',
-          component: Organizations
-        },
-        {
-          name: 'organizationPage',
-          path: ':db/organization/:name',
-          component: OrganizationPage,
-          props: true
-        },
-        {
-          name: 'cartPage',
-          path: 'cartPage',
-          component: CartPage
+          path: 'traiding',
+          name: 'traiding',
+          component: Traiding
         }
       ]
     }

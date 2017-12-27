@@ -37,7 +37,7 @@ const state = {
   currentDb: undefined,
   currentContentView: true,
   subdivision: '',
-  loading: true
+  preloader: false
 }
 
 const mutations = {
@@ -62,8 +62,6 @@ const mutations = {
     state.concert.promoter = concert.rollerman
     state.concert.shows = concert.show
     state.concert.showType = concert.show_type
-    state.loading = false
-    console.log('state loading onload - ', state.loading)
   },
 
   [types.RECEIVE_MOVIES] (state, movie) {
@@ -103,6 +101,18 @@ const mutations = {
     console.log(currentDb)
     state.currentDb = currentDb
     console.log('currentDb - ', state.currentDb)
+  },
+
+  [types.START_PRELOADER] (state) {
+    console.log('preloader fired')
+    state.preloader = true
+    console.log('preloader = ', state.preloader)
+  },
+
+  [types.STOP_PRELOADER] (state) {
+    console.log('preloader stoped')
+    state.preloader = false
+    console.log('preloader = ', state.preloader)
   }
 }
 

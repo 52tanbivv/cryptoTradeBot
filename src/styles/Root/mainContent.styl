@@ -1,5 +1,16 @@
 @import '../../styles/colors'
-.wrapper
+.main
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 500px;
   margin: 0 calc(35/1300*100%);
-  background: other-background;
+
+  &__btn
+    &--signUp
+      background: warn-background;
+      color: #ffffff;
+    &--signIn
+      background: elements-background;
+      color: #ffffff;
